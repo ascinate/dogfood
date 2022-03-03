@@ -1,0 +1,37 @@
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { FaRegCaretSquareRight } from "react-icons/fa";
+
+function BlogdetailsCategories() {
+    
+    return(
+        <>
+         <div className="blogcategories-div mb-5">
+            <h2 className="mb-4"> Categories </h2>
+            <ul className="list-unstyled">
+              <li>
+                <NavLink to="/blog"> <FaRegCaretSquareRight/> cursus vitae </NavLink>
+              </li>
+
+              <li>
+                <NavLink to="/blog"> <FaRegCaretSquareRight/> Typesetting Industry </NavLink>
+              </li>
+
+              <li>
+                <NavLink to="/blog"> <FaRegCaretSquareRight/> vitae semper enim rutrum </NavLink>
+              </li>
+
+              <li>
+                <NavLink to="/blog"> <FaRegCaretSquareRight/> enim fermentum </NavLink>
+              </li>
+
+              <li>
+                <NavLink to="/blog"> <FaRegCaretSquareRight/> bibendum convallis </NavLink>
+              </li>
+            </ul>
+         </div>
+        </>
+    );
+}
+
+export default BlogdetailsCategories;

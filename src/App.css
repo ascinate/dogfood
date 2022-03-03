@@ -1,0 +1,3005 @@
+@charset "utf-8";
+/* CSS Document */
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.fadeout {
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.loader {
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	text-align: center;
+	-webkit-transition: opacity 1s ease;
+	-moz-transition: opacity 1s ease;
+	-o-transition: opacity 1s ease;
+	transition: opacity 1s ease;
+}
+
+.loader-content {
+	background-size: 123px 38px;
+	display: block;
+	position: relative;
+	padding-top: 50px;
+	top: 45%;
+	
+}
+@-webkit-keyframes fadeInDown{0%
+	{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}
+	100%{opacity:1;-webkit-transform:none;transform:none}}
+@keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+
+a, abbr, acronym, address, applet, big, blockquote, body, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, iframe, img, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, tt, ul, var {
+	border: 0;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: none !important;
+	padding: 0;
+	vertical-align: baseline;
+	font-family: 'Open Sans', sans-serif;
+}
+button {
+	outline:  none !important;
+}
+img{
+	max-width:100%;
+}
+.btn:focus{
+  box-shadow: none !important;
+}
+h1{
+  font-family: 'Barlow Condensed', sans-serif;
+}
+h2{
+  font-family: 'Saira Condensed', sans-serif;
+ 
+}
+body{
+  padding: 0;
+  margin: 0;
+}
+header{
+  display: inline-block;
+  width: 100%;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+}
+
+.navbar-nav .nav-link{
+  font-family: 'Quicksand', sans-serif;
+  color: #45464b !important;
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-transform: capitalize;
+  
+}
+.navbar-nav .nav-item{
+  margin: 0 10px;
+}
+.dropdown-menu1{
+	top: 80px;
+	opacity: 0;
+	transition:top 0.8s ease;
+	visibility: hidden;
+	z-index: 1;
+	-webkit-transition: all .25s ease;
+	-moz-transition: all .25s ease;
+	-ms-transition: all .25s ease;
+	-o-transition: all .25s ease;
+	transition: all .25s ease;
+	display: block !important;
+  border: none !important;
+	
+	
+}
+.dropdown:hover>.dropdown-menu1{
+  top:100%;
+  height:inherit;
+  opacity:inherit; 
+  opacity:9; 
+  visibility: visible;}
+
+.dropdown-menu1:before {
+    position: absolute;
+    top: -10px;
+    width: 10px;
+    left: 20px;
+    height: 10px;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+    border-bottom: solid 10px #fff;
+    content: '';
+}
+
+.cart-dropdown-ne {
+  width: 310px;
+  right: 0;
+  left: inherit !important;
+  border: none;
+  visibility: hidden;
+  transition: all 0.5s;
+  top: 120%;
+  display: block !important;
+}
+.comon-cart-ps {
+  padding: 15px 19px 14px;
+  margin: 0;
+  border-bottom: solid 1px #ebebeb;
+  width: 100%;
+  display: inline-block;
+}
+.products-sm-pic figure {
+  height: 60px;
+  width: 60px;
+  overflow: hidden;
+  margin: 0;
+}
+.products-sm-pic figure img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.titel-crt-products {
+  color: #212529;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.cart-ps-details h6 {
+  color: #eda81d;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.log-cart-div .dropdown .close-crt svg{
+  color: #212529 !important;
+  cursor: pointer;
+  
+}
+.log-cart-div .dropdown .close-crt:hover svg{
+  color: #eda81d !important;
+}
+.cart-dropdown-ne.show {
+  visibility: visible;
+  top: 100%;
+  top: 100%;
+}
+.sub-total-products {
+  padding: 10px 15px;
+}
+.sub-total-products h4 {
+  color: #eda81d;
+  font-weight: 600;
+}
+
+.cart-drop-bn {
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 600;
+  display: table;
+  background-color: #eda81d !important;
+}
+.check-drop-bn {
+  background-color: #000 !important;
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 600;
+  display: table;
+  color: #fff !important;
+  margin-top: 10px;
+}
+.log-cart-div .dropdown li:last-child{
+  margin: auto !important;
+} 
+.fixed-menu{
+	background:#fff;
+	position: fixed;
+	top:0;
+	animation:slide-down 0.7s;
+	left:0;
+	right:0;
+    box-shadow:4px -86px 103px rgba(0,0,0,0.9);
+	z-index:250;
+		
+  }
+
+@keyframes slide-down {
+		  0% {
+			  transform: translateY(-100%);
+		  } 
+		  100% {
+			  transform: translateY(0);
+		  } 
+	  }
+	  
+	  @keyframes slide {
+		0% {
+			opacity: 0;
+			transform: translateY(50%);
+		} 
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		} 
+	}
+.menu_active{
+  color: #000 !important;
+}
+.nav-link.active {
+  color: #000 !important;
+ 
+}
+.log-cart-div .nav-link,
+.login-bn{
+  font-family: 'Quicksand', sans-serif;
+  color: #45464b !important;
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-transform: capitalize;
+  text-decoration: none;
+  cursor: pointer;
+}
+.log-cart-div ul li:last-child{
+  margin-left: 10px;
+}
+.log-cart-div .dropdown-toggle:after{
+  display: none;
+
+}
+.log-cart-div .dropdown-toggle{
+  position: relative;
+  padding: 0;
+}
+.log-cart-div .dropdown-toggle .cart-nuber{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  position: absolute;
+  right: -12px;
+  top: 10px;
+  background: #1a1a1b;
+  color: #fff;
+}
+.log-cart-div .dropdown svg{
+  color: #45464b !important;
+  font-size: 27px;
+}
+
+.banner-part{
+  background: url(../src/images/banner-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position:center center;
+  width: 100%;
+  height: 735px;
+  position: relative;
+  display: grid;
+  /* align-content: center; */
+
+}
+.banner-part .container{
+  position: relative;
+  z-index: 2;
+}
+.banner-svg{
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: inline-block;
+  bottom: -53px;
+  z-index: 1;
+}
+.banner-content{
+  height: 650px;
+  display: grid;
+  align-content: center;
+  width: 100%;
+  margin-top: 0px;
+  padding-top: 20px;
+}
+.banner-pic{
+  margin-top: 90px;
+  display: inline-block;
+}
+.banner-part h1,
+.banner-part p{
+  color: #45464b;
+  position: relative;
+}
+.subimg{
+  position: absolute;
+  left: -50px;
+  top: -54px;
+  width: 18%;
+}
+.banner-part h1{
+  text-transform: uppercase;
+  line-height: .95;
+}
+.banner-part h1,
+.banner-part h1 span{
+  font-weight:700;
+  font-size: 5rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  color: #45464b;
+}
+.banner-part p{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  
+}
+
+/* subpage banner */
+.subpage-banner{
+  background: url(../src/images/sub-banner.jpg) no-repeat;
+  background-size: cover ;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+
+}
+.sub-page-content{
+  height:220px;
+  display: grid;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  padding-top: 50px;
+  
+}
+.sub-page-content h1{
+  font-weight: 700;
+  font-size: 45px;
+  font-family: 'Barlow Condensed', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+}
+.sub-page-content ul li{
+  margin: 0 8px;
+  color: #fff;
+}
+.sub-page-content ul li:first-child{
+  margin-left: 0;
+}
+.sub-page-content ul li:last-child{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 700;
+  color: #000;
+
+}
+.sub-page-content ul li a{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #fff;
+}
+/* subpage banner ends */
+.quick-contact-sec{
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+  width: 100%;
+  padding-bottom: 50px;
+}
+.about-bn{
+  background: #eda81d;
+  border-radius: 30px !important;
+  height: 55px;
+  display: flex;
+  width: 210px;
+  color: #45464b !important;
+  place-items: center;
+  text-align: center !important;
+  justify-content: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 600;
+  transition: all 0.5s;
+  padding: 20px 40px;
+  font-size: 1.125rem;
+
+}
+.about-bn svg{
+  margin-left: 5px;
+}
+.about-bn:hover{
+  background: #45464b !important;
+  color: #fff !important;
+}
+
+/* body css */
+.total-body{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+/* home page */
+.comon-quick-div{
+  padding:0 25px;
+  height: 300px;
+  overflow: hidden;
+  display: grid;
+  align-content: center;
+}
+.comon-quick-div figure{
+  width: 64px;
+  height: 80px;
+  margin: auto;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.comon-quick-div h2{
+  font-family: 'Saira Condensed', sans-serif;
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 24px;
+}
+
+.comon-quick-div p{
+  font-family: 'Quicksand', sans-serif;
+  text-transform: capitalize;
+}
+
+.comon-bn{
+   background-color:#eda81d !important;
+   color: #fff !important;
+   border-radius: 30px !important;
+   padding: 10px 25px !important;
+   font-weight: 600 !important;
+   transition: all 0.5s;
+   display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: auto;
+  transform: scale(1);
+  transition: all ease-in-out 0.5s;
+}
+.comon-bn svg{
+  margin-right: 5px;
+}
+.quick-contact-sec .row > div:nth-child(2) .comon-bn{
+  background-color: #000 !important;
+}
+.quick-contact-sec .row > div:nth-child(2) .comon-quick-div{
+  box-shadow: 0px 0px 50px 0px rgb(0 0 0 / 10%);
+  padding: 15px 25px;
+}
+.comon-quick-div:hover .comon-bn{
+  transform: scale(1.1);
+}
+
+
+.compainer-div{
+  background: #f9f9f9 url(../src/images/pattern.png) repeat-x;
+  padding-top: 50px;
+  display: inline-block;
+  width: 100%;
+  background-size: cover;
+}
+.compainer-div h2{
+  font-size: 50px !important;
+  font-weight:700 !important;
+  text-transform: capitalize;
+}
+.tabs-sec-food .nav-tabs{
+  border-bottom: none !important;
+}
+.tabs-sec-food .nav-link{
+  background: #fff !important;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 50px 0px rgb(0 0 0 / 10%);
+   border-radius: 30px !important;
+   padding: 10px 15px;
+   color: #101010;
+   border: none !important;
+   transition: all 0.5s;
+}
+.tabs-sec-food .nav-link:hover{
+  background: #000 !important;
+  color: #fff;
+}
+.tabs-sec-food .nav-item{
+   margin: 0 10px;
+   
+} 
+.tabs-sec-food  .nav-link.active{
+    background: #eda81d !important;
+    color: #fff !important;
+}
+.comon-part-ps{
+  margin-top: 40px;
+}
+.comon-part-ps figure{
+  width:70px;
+  height:70px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 50px 0px rgb(0 0 0 / 10%);
+  padding: 11px;
+}
+.comon-part-ps figure img {
+  width: 87%;
+  margin: auto;
+}
+.comon-part-ps h5{
+  font-family: 'Saira Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  text-transform: capitalize;
+}
+.comon-choseing-part{
+  padding: 70px 0;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+.comon-choseing-part h2{
+  font-family: 'Saira Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  text-transform: capitalize;
+}
+.comon-choseing-part ul,
+.left-treat-sec ul{
+
+  column-count: 2;
+  column-gap: 10px;
+
+}
+.comon-choseing-part ul li,
+.left-treat-sec ul li{
+  margin-bottom: 15px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.comon-choseing-part ul svg,
+.left-treat-sec ul svg{
+  color: #eda81d;
+  margin-right:5px;
+}
+.how-it-work-home{
+  background: url(../src/images/bg-process.jpg)no-repeat;
+  padding: 70px 0;
+  display: inline-block;
+  width: 100%;
+  background-size: cover;
+}
+.how-it-work-home h2{
+  color: #fff;
+  font-family: 'Saira Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  text-transform: capitalize;
+}
+.how-it-work-home p{
+  color: #fff;
+}
+.how-it-work-home h5{
+  color: #fff;
+  font-family: 'Saira Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 27px;
+  text-transform: capitalize;
+}
+.comon-work figure{
+  height: 80px;
+  overflow: hidden;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.ourclient-details-div{
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  background-image: url(../src/images/pattern.png);
+  background-repeat: no-repeat;
+  background-color: #fff;
+  padding: 70px 0;
+}
+.ourclient-bg-img{
+  position: absolute;
+  right: 0;
+  top:0;
+}
+.ourclient-details-div h2,
+.our-treat-care h2,
+.our-nutrions-div h2,
+.our-expart-team h2,
+.testmonial-sec-div h2,
+.blog-home-sec h2{
+  font-family: 'Saira Condensed', sans-serif;
+font-weight: 700;
+font-size: 50px;
+text-transform: capitalize;
+}
+
+.our-ws-progress figure{
+  display: grid;
+align-content: center;
+justify-content: center;
+border-radius: 50%;
+overflow: hidden;
+background: #fff;
+box-shadow: 0px 0px 50px 0px rgb(0 0 0 / 10%);
+padding: 11px;
+width: 120px;
+height: 120px;
+margin: 0;
+}
+.our-ws-progress figure img{
+  width: 80%;
+  margin: auto;
+  display: table;
+  transition: all 0.5s;
+  transform: scale(1);
+}
+.our-ws-progress:hover figure img{
+  transform: scale(1.1);
+}
+
+.progress-details{
+  padding-left: 20px;
+}
+.progress-details h4{
+  font-family: 'Saira Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 41px;
+  text-transform: capitalize;
+  color: #eda81d;
+  letter-spacing: 1px;
+  transition: all 0.5s;
+  transform: scale(1);
+}
+.our-ws-progress:hover .progress-details h4{
+  transform: scale(1.1);
+}
+.progress-details h5{
+  font-family: 'Saira Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 27px;
+  text-transform: capitalize;
+}
+
+.register-bn,
+.get-st-bn{
+  color: #fff !important;
+border-radius: 30px !important;
+padding: 10px 25px !important;
+font-weight: 600 !important;
+transition: all 0.5s;
+display: flex !important;
+justify-content: center;
+align-items: center;
+
+background-color: #000 !important;
+}
+.our-treat-care,
+.our-nutrions-div{
+  background:#f9f9f9;
+}
+.left-treat-sec{
+  
+}
+.care-img-box{
+  width: 100%;
+  height:440px;
+  overflow: hidden;
+  margin: 0;
+  border-radius: 23px;
+  display: inline-block;
+}
+.care-img-box img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.our-nutrions-div .container-fluid{
+   padding: 0;
+}
+.our-nutrions-div .row{
+  margin: 0;
+}
+.our-nutrions-div .row > div,
+.our-treat-care .row > div{
+  padding: 0;
+}
+.our-expart-team{
+  background:#fff url(../src/images/pattern.png) no-repeat;
+}
+.about-more-btn{
+  color: #fff !important;
+  border-radius: 30px !important;
+  padding: 10px 25px !important;
+  font-weight: 600 !important;
+  transition: all 0.5s;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  background-color: #000 !important;
+  width: 152px;
+  margin: 25px 0;
+}
+
+.our-expart-team{
+  padding: 70px 0;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+.comon-teams-div figure{
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  display: table;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  background: #fff;
+  box-shadow: 0px 0px 50px 0px rgb(0 0 0 / 10%);
+  border: solid 10px transparent;
+  transition: all 0.5s;
+
+}
+.comon-teams-div figure img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+  transform: scale(1);
+}
+.comon-teams-div:hover figure{
+  border: solid 10px #eda81d;
+}
+.comon-teams-div:hover figure img{
+  transform: scale(1.1);
+
+}
+.comon-teams-div h5{
+  text-transform: capitalize;
+  font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 21px;
+}
+.comon-teams-div p{
+  font-family: 'Quicksand', sans-serif;
+  color: #eda81d;
+  text-transform: capitalize;
+}
+.testmonial-sec-div{
+  background-color:#0e0e0f;
+  background-image: url(../src/images/h1_bg-shape-foot.png);
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 70px 0;
+  overflow: hidden;
+}
+.testmonial-sec-div h2{
+  color: #fff;
+}
+.testmonial-sec-div h6{
+  font-family: 'Quicksand', sans-serif;
+  color: #eda81d;
+  text-transform: capitalize;
+  margin-bottom: 0;
+  font-size: 25px;
+}
+.maskpic{
+  mask-image: url(../src/images/mask-image.png);
+  position: relative;
+  width: 100px;
+  mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    margin: auto;
+}
+
+.maskpic img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  mask-size: 100px 100px;
+}
+.maskpic2 {
+  width: 170px;
+  height: 170px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: auto;
+}
+.maskpic2 img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.inside-client-re h5{
+  color: #fff;
+}
+
+.inside-client-re p{
+  color: #999;
+  margin-top: 10px;
+}
+.inside-client-re h5{
+  font-family: 'Quicksand', sans-serif;
+}
+.inside-client-re h6{
+  font-size: 15px !important;
+}
+.owl-dots{
+  margin-top: 25px !important;
+}
+.bd-img-testmonial{
+  position: absolute;
+  right: 0;
+  top:-80px;
+}
+.blog-home-sec{
+  padding: 70px 0;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  background-image: url(../src/images/pattern.png);
+  background-repeat: no-repeat;
+}
+.lates-blog{
+  background:#fff;
+  height: 590px;
+  overflow: hidden;
+  box-shadow: 0px 0px 50px 0px rgb(0 0 0 / 10%);
+}
+.lates-blog figure{
+  height: 300px;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.lates-blog figure img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.details-home-sec{
+   padding: 10px 0 0 20px;
+}
+.category-name{
+  position: absolute;
+  top:15px;
+  left:15px;
+  background: #eda81d;
+  color: #fff;
+  z-index: 1;
+  padding: 10px 25px;
+  font-size: 16px;
+  border-radius: 20px;
+  font-family: 'Quicksand', sans-serif;
+}
+.details-home-sec ul li{
+  margin: 0 10px;
+  font-family: 'Quicksand', sans-serif;
+  text-transform: capitalize;
+}
+.details-home-sec ul li:first-child{
+  margin-left: 0;
+}
+.details-home-sec ul li svg{
+  margin-right: 10px;
+  color: #eda81d;
+}
+.details-home-sec h5{
+  text-overflow: ellipsis;
+  width: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+.details-home-sec p{
+  font-size: 15px;
+}
+.blogbtn{
+  color: #fff !important;
+border-radius: 30px !important;
+padding: 10px 25px !important;
+font-weight: 600 !important;
+transition: all 0.5s;
+display: flex !important;
+justify-content: center;
+align-items: center;
+background-color: #000 !important;
+width: 161px;
+margin: 25px 0;
+}
+.blogbtn svg{
+  margin-left: 8px;
+}
+.new-letter-div{
+   background-color:#eda81d;
+   background-image: url(../src/images/pattern.png);
+   padding: 70px 0;
+   position: relative;
+   display: block;
+   width: 100%;
+   overflow: hidden;
+}
+
+.new-letter-div .form-group{
+  background:#fff;
+  border-radius:60px;
+  overflow: hidden;
+
+}
+.new-letter-div h2,
+.new-letter-div p{
+  color: #fff;
+}
+.new-letter-div h2{
+  font-family: 'Saira Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  text-transform: capitalize;
+
+}
+.new-letter-div p{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+}
+.new-letter-div .form-group .form-control{
+  border: none;
+  height: 63px;
+}
+.new-letter-div .form-group .subscribe-bn{
+  background: #000;
+  border-radius: 0;
+  color: #fff;
+}
+
+.newbg-pic{
+  position: absolute;
+  left: 0;
+  bottom: -80px;
+  display: inline-block;
+  width: 27%;
+}
+
+footer{
+  background: #0e0e0f;
+  padding: 50px 0 0;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  top:0;
+}
+footer hr{
+  background-color: #bbb;
+}
+footer ul li,
+footer ul li a{
+   color: #fff;
+   text-decoration: none;
+   transition: all 0.5s;
+}
+footer ul li a:hover{
+  color: #eda81d;
+}
+footer ul li{
+  margin-bottom: 10px;
+}
+footer h5{
+  color: #eda81d;
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 25px;
+}
+
+
+
+.fixed-menu .navbar-nav .nav-link{
+  color: #000 !important;
+}
+.fixed-menu .log-cart-div .nav-link,
+.fixed-menu .log-cart-div .login-bn,
+.fixed-menu .log-cart-div .dropdown svg{
+  color: #000 !important;
+}
+
+
+.sc-logo-ps{
+  display: none;
+}
+.fixed-menu .sc-logo-ps{
+  display: block;
+}
+.fixed-menu .logo-ps{
+  display: none;
+}
+
+/* blog page */
+
+.blog-page-div h2{
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  text-transform: capitalize;
+}
+
+.comon-blog-post{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0px 0px 50px 0px rgb(0 0 0 / 10%);
+  padding: 15px;
+  margin-bottom: 30px;
+  text-decoration: none;
+  flex-wrap: wrap;
+}
+.comon-blog-post figure{
+  width: 45%;
+  height: 222px;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.comon-blog-post figure img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+.comon-blog-post:hover figure img{
+  transform: scale(1.1);
+}
+.dateblog{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #eda81d;
+  text-align: center;
+  display: grid;
+  align-content: center;
+  width: 60px;
+  height: 58px;
+  font-family: 'Barlow Condensed', sans-serif;
+  color: #fff;
+  font-size: 19px;
+  padding: 10px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+.post-details{
+  width: 50%;
+}
+.post-details h5{
+  text-overflow: ellipsis;
+  width: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+  color: #000;
+}
+.post-details ul li{
+  font-family: 'Barlow Condensed', sans-serif;
+  text-transform: capitalize;
+  color: #000;
+}
+.post-details ul li svg{
+  color:#eda81d ;
+}
+.post-details p{
+  color: #282828;
+  font-size: 14px;
+}
+.read-more-bn{
+  background: #000 !important;
+  color: #fff !important;
+}
+.share-div ul{
+  list-style-type: none;
+
+}
+.post-img{
+  height: 350px;
+  overflow: hidden;
+  width: 100%;
+  display: inline-block;
+}
+.post-img img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.blogleft-sec ul li{
+  margin: 0 10px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+}
+.blogleft-sec ul li:first-child{
+  margin-left: 0;
+}
+.blogleft-sec ul li svg{
+  margin-right: 5px;
+}
+.blogleft-sec ul li svg{
+  color: #eda81d;
+}
+.share-bn svg{
+  color: #eda81d;
+  margin-right: 5px;
+}
+.share-bn{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+}
+.comon-comnet-sec{
+  justify-content: space-between;
+  border-bottom: solid 1px #ebebeb;
+}
+.all-cm-div > div:last-child{
+  border-bottom: none;
+}
+.comon-comnet-sec figure {
+  width: 63px;
+  height: 63px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.comon-comnet-sec h5{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+}
+.comon-comnet-sec h5 span{
+  margin-left: 10px;
+  font-size: 13px;
+  color: #eda81d;
+}
+.comon-comnet-sec p{
+  font-size: 14px;
+}
+.user-cmn{
+  width: 90%;
+}
+.leave-commnet-sec{
+   margin-top: 20px;
+}
+
+.leave-commnet-sec h2,
+.comment-sec-part h2{
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+}
+.leave-commnet-sec{
+  display: inline-block;
+    width: 100%;
+    padding: 10px 20px;
+    box-shadow: 5px 7px 15px 2px rgb(82 90 101 / 12%);
+    margin: 30px 0;
+    padding-bottom: 20px;
+}
+.leave-commnet-sec .form-group {
+  margin-top: 20px;
+}
+.leave-commnet-sec .form-control, .conatct-form-div .form-control{
+    border: none;
+    background: #f1f1f1;
+    height: 45px;
+}
+.leave-commnet-sec textarea{
+    height: 100px !important;
+    resize: none;
+}
+.post-bn{
+  background: #000 !important;
+    color: #fff !important;
+    font-weight: 600;
+}
+
+.recent-blog-part,
+.blogcategories-div{
+  background: #f1f1f1;
+    padding: 30px;
+    display: inline-block;
+    width: 100%;
+}
+
+.comon-recent{
+  text-decoration: none;
+  border-bottom: solid 1px #fff;
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.comon-recent figure {
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  margin: 0;
+ 
+}
+.comon-recent figure img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+.comon-recent a:first-child{
+  width: 90px;
+  height: 60px;
+}
+.comon-recent:hover figure img{
+  transform: scale(1.1);
+}
+.comon-recent a:last-child{
+  width: 60%;
+  text-decoration: none;
+  color: #212529;
+}
+.recent-blog-part h2,
+.blogcategories-div h2{
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+}
+.comon-recent a h5 {
+  
+  color: #212529;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 600;
+  transition: all 0.5s;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.blogcategories-div ul li{
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #fff;
+  display: flex;
+  align-items: center;
+}
+.blogcategories-div ul li:last-child{
+  border-bottom: none;
+}
+.blogcategories-div ul li a{
+  color: #000;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: all 0.5s;
+}
+.blogcategories-div ul li a:hover{
+  color: #eda81d;
+}
+.recent-all-post > div:last-child{
+  border-bottom: none;
+}
+.ourplan-div h2{
+  font-size: 50px !important;
+font-weight: 700 !important;
+text-transform: capitalize;
+}
+.comon-paln-sec{
+  box-shadow: 5px 7px 15px 2px rgb(82 90 101 / 12%);
+  width: 100%;
+  min-height:620px;
+  border-radius: 8px;
+  display: inline-block;
+
+}
+
+.img-box-plan{
+  height: 270px;
+  position: relative;
+}
+.comon-paln-sec figure{
+  height: 250px;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 8px;
+  position: relative;
+  display: inline-block;
+}
+.comon-paln-sec figure img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+.comon-paln-sec:hover figure img{
+  transform: scale(1.1);
+}
+.comon-paln-sec:hover .price{
+  background: #000;
+}
+.price{
+   width: 120px;
+   height: 120px;
+   background: #eda81d;
+   bottom: -10px;
+   z-index: 1;
+   left: 0;
+   right: 0;
+   display: grid;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    border-radius: 50%;
+    color: #fff;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight:700;
+    font-size: 40px;
+    transition: all 0.5s;
+}
+.price i{
+  font-size: 14px;
+  font-family: 'Quicksand', sans-serif;
+}
+.comon-plan-div{
+  display:inline-block;
+}
+.comon-plan-div h5{
+  font-family: 'Barlow Condensed', sans-serif;
+    font-weight:700;
+    font-size: 40px;
+    text-align: center;
+}
+.comon-plan-div ul li{
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+}
+.comon-plan-div ul li svg{
+  color: #eda81d;
+  margin-right: 8px;
+  font-size: 22px;
+}
+.plan-bn-cm{
+  background: #000 !important;
+  color: #fff !important;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 30px !important;
+  padding: 10px 25px !important;
+}
+.plan-bn-cm svg{
+  margin-left: 10px;
+}
+.ourplan-div .row > div:nth-child(2) .plan-bn-cm{
+
+  background: #eda81d !important;
+  color: #fff;
+
+}
+.booking-part h2{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight:700;
+    font-size: 40px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.booking-part .form-group{
+  margin-top: 20px;
+}
+.booking-part .form-control{
+  border: none;
+  background: #f1f1f1;
+  height: 45px;
+}
+.booking-part textarea.form-control{
+
+  height: 150px !important;
+  resize: none;
+}
+.booking-bn{
+  background: #000 !important;
+  padding: 10px 25px !important;
+  border-radius: 30px !important;
+  color: #fff !important;
+  font-family: 'Quicksand', sans-serif;
+  transition: all 0.5s;
+  margin-top: 25px;
+}
+.booking-bn:hover{
+  background: #eda81d !important;
+}
+
+.cart-left-sec{
+  background: #fff;
+  box-shadow: 0 1px 22px 0 rgb(0 0 0 / 9%);
+  padding: 15px 20px;
+  min-height: 270px;
+}
+.oder-total-div{
+  background: #fff;
+  box-shadow: 0 1px 22px 0 rgb(0 0 0 / 9%);
+  padding: 15px;
+}
+.cart-left-sec h2,
+.oder-total-div h2{
+  font-size:30px;
+  font-weight: 700;
+}
+.cart-left-sec hr{
+  background: #bbb;
+}
+.comon-sec-div-mn{
+  background: #fff;
+  border-bottom: solid 1px #eee;
+  display: inline-block;
+  width: 100%;
+  padding-top: 15px;
+}
+.cart-products-titel {
+  width: 161px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #212529;
+  text-decoration: none;
+  margin-left: 5px;
+  text-transform: capitalize;
+}
+
+/* quntity css */
+.order-pic {
+  width: 80px;
+  overflow: hidden;
+  height: 80px;
+  display: inline-block;
+}
+.order-pic img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+  transform: scale(1);
+}
+.comon-sec-div-mn:hover .order-pic img{
+  transform: scale(1.1);
+}
+.icon-sm {
+  width: 2rem;
+  height: 2rem;
+}
+.comon-sec-div-mn .form-group{
+  width: 30%;
+}
+.quantity-field{
+  pointer-events: none;
+  outline: none;
+    user-select: none;
+    appearance: none;
+    -webkit-appearance: none;
+    
+    -moz-appearance: none;
+}
+
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.price-text{
+  color: #eda81d;
+  font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
+  
+}
+.cross-bn{
+  color: #000 !important;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+.cross-bn:hover{
+  color: #eda81d !important;
+  transform: scale(1.1);
+}
+.tbale-cart > div:last-child{
+  border-bottom: none;
+}
+
+.price-am, .delivery-am, .discount-am {
+  display: flex;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+  justify-content: space-between;
+  font-size: 15px;
+}
+.price-am span {
+  font-weight: 700;
+  font-size: 20px;
+}
+.delivery-am span {
+  font-size: 15px;
+  font-weight: 700;
+  color: #eda81d;
+}
+.new-input {
+  padding: 12px 0 12px 5px !important;
+  background-color: #f7f7f7 !important;
+  font-size: 12px;
+  border: none !important;
+}
+.cp-bn {
+  font-weight: 600;
+  border-radius: 0 !important;
+  margin-top: 0;
+  font-size: 13px;
+  color: #fff !important;
+  padding: 12px !important;
+  background: #eda81d !important;
+}
+.total-price {
+  color: #eda81d;
+  padding: 10px 0;
+  font-weight: 700;
+  font-size: 16px;
+}
+.total-price p{
+  font-size: 18px;
+}
+
+.left-checkout{
+    background: #fff;
+    box-shadow: 0 1px 22px 0 rgb(0 0 0 / 9%);
+    padding: 15px 20px;
+}
+.left-checkout h2,
+.checkout-right h2{
+  font-weight: 700;
+}
+.left-checkout .form-group{
+  margin-bottom: 15px;
+}
+.left-checkout label{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+.left-checkout .form-control,
+.left-checkout .form-select{
+  font-weight: 300;
+  height: auto !important;
+  padding: 15px;
+  color: #888888;
+  background-color: #f1f1f1;
+  border: none;
+}
+.left-checkout textarea.form-control{
+  height: 100px;
+  resize: none;
+}
+.end-date, .cvv {
+  display: flex;
+  place-items: center;
+}
+.end-date .form-select {
+  margin-right: 5px;
+  font-size: 13px;
+}
+.left-sec-d2 {
+  margin-left: 15px;
+}
+.cvv .form-control {
+  width: 60%;
+  margin-right: 8px;
+}
+#ac-1{
+  display: none;
+}
+#ac-2{
+  display: none;
+}
+.checkout-right{
+  background: #fff;
+    box-shadow: 0 1px 22px 0 rgb(0 0 0 / 9%);
+    padding: 15px 20px;
+}
+.checkout-table tr th {
+    background: #f7f7f7;
+    border: none !important;
+    text-transform: capitalize;
+    font-family: 'Quicksand', sans-serif;
+}
+.checkout-table tr:last-child td {
+  border: none;
+}
+.paybn{
+  background: #eda81d !important;
+  color: #fff !important;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+}
+.cm-text-n h6,
+.contact-form-div h6 {
+  color: #eda81d;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+}
+.cm-text-n h2,
+.contact-form-div h2{
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+}
+.cm-text-n ul li {
+  margin-bottom: 20px;
+}
+.cm-text-n ul li .icon-c {
+  width: 45px;
+  height: 45px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: grid;
+  align-content: center;
+  background: #eda81d;
+  color: #fff;
+  justify-content: center;
+  font-size: 18px;
+}
+.text-c {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 15px;
+  font-family: 'Quicksand', sans-serif;
+}
+.text-c small {
+  font-weight: 600 !important;
+  font-size: 19px;
+  color: #eda81d;
+}
+.contact-form-div{
+  display: inline-block;
+  width: 100%;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 5px 7px 15px 2px rgb(82 90 101 / 12%);
+}
+.contact-form-div .form-control{
+    border: none;
+    background: #f1f1f1;
+    height: 45px;
+    margin-bottom: 20px;
+}
+.mesg-fild{
+  height: 100px !important;
+  resize: none;
+}
+.subimt-message{
+  background: #eda81d !important;
+  width: 150px;
+  font-family: 'Quicksand', sans-serif;
+  color: #fff !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+.subimt-message:hover{
+  background: #000 !important;
+}
+
+.About-history h2,
+.why-choose-partabout h2{
+  font-size: 50px;
+  font-weight: 700;
+}
+.About-history h6{
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+}
+.why-choose-partabout{
+  background: #f9f9f9 url(http://localhost:3000/static/media/pattern.54917017a37947ca2ae5.png) repeat-x;
+  padding: 50px 0;
+  display: inline-block;
+  width: 100%;
+}
+.comon-choose-div{
+  background: #fff;
+  box-shadow: 0px 0px 50px 0px rgb(0 0 0 / 10%);
+  height: 190px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.comon-choose-div figure {
+  width: 64px;
+  height: 70px;
+  margin: auto;
+  overflow: hidden;
+  display: inline-block;
+}
+.comon-choose-div h2{
+  font-size: 30px;
+  margin: auto;
+}
+
+.login-div-modal .modal-content, .login-div-modal .modal-header {
+  background: none;
+  border: none;
+}
+.com-div-md {
+  background: #fff;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.user-icon svg{
+  font-size: 35px;
+}
+.login-div-modal h5 {
+  font-weight: 700;
+  font-size: 35px;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+.login-div-modal .close {
+  transform: none;
+  position: absolute;
+  right: 22px;
+  top: 27px;
+  border: none;
+  background: none;
+  font-size: 29px;
+}
+.login-modal-pn {
+  padding: 10px 40px 30px 40px;
+}
+.login-modal-pn .form-control {
+  border: none;
+  font-size: 15px;
+  background: #f3f3f3;
+  height: 45px;
+  margin-bottom: 20px;
+}
+.continue-bn{
+  background: #eda81d !important;
+  color: #fff !important;
+  width: 100%;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+}
+.regster-bn {
+  text-decoration: none;
+  transition: all 0.5s;
+  font-weight: 600;
+  color: #eda81d;
+  cursor: pointer;
+}
+.regster-bn:hover{
+  color: #000;
+}
+.steps-text{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+}
+.our-treat-care{
+  overflow-x: hidden;
+}
+.our-miison h2{
+  font-weight: 700;
+  font-size: 50px;
+  text-transform: capitalize;
+  line-height: 50px;
+}
+.build-bn,
+.comon-bn-new,
+.order-now{
+  color: #fff !important;
+  border-radius: 30px !important;
+  padding: 10px 25px !important;
+  font-weight: 600 !important;
+  transition: all 0.5s;
+  align-items: center;
+  background-color: #000 !important;
+}
+.build-bn:hover,
+.comon-bn-new:hover,
+.order-now:hover{
+  background-color: #eda81d !important;
+}
+.our-miison ul li{
+  margin-bottom: 15px;
+  font-family:'Quicksand', sans-serif;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.our-miison ul li svg{
+  font-size: 25px;
+  color: #eda81d;
+  margin-right: 5px;
+}
+.our-miison h6{
+  color: #eda81d;
+  font-family:'Quicksand', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.ourmisson-pic{
+  width: 100%;
+  height: 580px;
+  overflow: hidden;
+  border-radius: 25px;
+  margin-bottom: 0;
+}
+.ourmisson-pic img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.recipe-1 h2,
+.recipe-2 h2,
+.recipe-3 h2,
+.recipe-5 h2,
+.order-page h2{
+  font-family: 'Saira Condensed', sans-serif;
+  color: #000;
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 50px;
+  line-height: 57px;
+}
+.recipe-2{
+  background: #f9f9f9 url(../src/images/pattern.png) repeat-x;
+  display: inline-block;
+  width: 100%;
+  background-size: cover;
+}
+.comon-iconpic{
+  width: 70px;
+  height: 70px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 50px 0px rgb(0 0 0 / 10%);
+  padding: 11px;
+}
+.comon-iconpic img {
+  width: 87%;
+  margin: auto;
+}
+.comon-sp-recipe h5{
+  font-family:'Saira Condensed', sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  text-transform: capitalize;
+  
+}
+.recipe-4{
+  background-color:#0e0e0f;
+  background-image: url(../src/images/h1_bg-shape-foot.png);
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+}
+.recipe-4 h2{
+  font-family: 'Saira Condensed', sans-serif;
+  color: #fff;
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 50px;
+  line-height: 57px;
+}
+.order-now svg{
+  margin-left: 10px;
+}
+
+.order-page{
+  position: relative;
+  width: 100%;
+}
+.order-page .container{
+  position: relative;
+  z-index: 1;
+}
+
+/* form wizard */
+.form-wizard .form-wizard-steps {
+  margin: 30px 0;
+}
+.form-wizard .form-wizard-header {
+  text-align: center;
+}
+.form-wizard .form-wizard-steps li {
+  width: 20%;
+  float: left;
+  position: relative;
+}
+.form-wizard .form-wizard-steps li.active span, .form-wizard .form-wizard-steps li.activated span {
+  background-color: #eda81d;
+  color: #ffffff;
+}
+.form-wizard .form-wizard-steps li span {
+  background-color: #dddddd;
+  border-radius: 50%;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  width: 40px;
+  z-index: 1;
+}
+.form-wizard .form-wizard-steps li.active::after, .form-wizard .form-wizard-steps li.activated::after {
+  background-color: #eda81d;
+  left: 50%;
+  width: 50%;
+  border-color: #eda81d;
+}
+.form-wizard .form-wizard-steps li::after {
+  background-color: #f3f3f3;
+  content: "";
+  height: 5px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
+}
+.form-wizard .wizard-fieldset {
+  display: none;
+}
+.form-wizard .wizard-fieldset.show {
+  display: block;
+}
+.form-wizard .form-control,
+.form-wizard .form-select {
+  font-weight: 300;
+  height: auto !important;
+  padding: 15px;
+  color: #000;
+  background-color: #f1f1f1;
+  border: none;
+  text-transform: capitalize;
+}
+.form-wizard .wizard-form-error {
+  display: none;
+  background-color: #d70b0b;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+}
+.form-wizard .form-group {
+  position: relative;
+  margin: 12px 0;
+}
+.form-wizard .form-wizard-steps li::after {
+  background-color: #f3f3f3;
+  content: "";
+  height: 5px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
+}
+.form-wizard .form-wizard-steps li:last-child:after {
+  width: 50%;
+  
+}
+.form-wizard .form-wizard-steps li:last-child.active::after{
+  width: 16%;
+}
+.form-wizard label{
+  font-family: 'Saira Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 23px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+.form-wizard-next-btn,
+.form-wizard-previous-btn{
+  background-color: #eda81d;
+  padding: 10px 20px;
+  color: #fff !important;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.5s;
+
+}
+.form-wizard-next-btn:hover,
+.form-wizard-previous-btn:hover{
+  background-color: #000;
+}
+.textare-div{
+  height: 100px !important;
+  overflow: hidden;
+  resize: none;
+}
+.form-wizard-submit{
+  background-color: #000;
+  padding: 10px 20px;
+  color: #fff !important;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+.form-wizard-submit:hover{
+  background-color: #eda81d;
+}
+.bd-picorder{
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 20%;
+}
+.form-wizard .form-wizard-steps li.activated::after {
+  width: 100%;
+  border-color: #75389f;
+}
+.ratinghead{
+  color: #eda81d;
+}
+.google-revies{
+  background: #f9f9f9 url(../src/images/pattern.png) repeat-x;
+  display: inline-block;
+  width: 100%;
+}
+.review-total h2{
+  font-family: 'Saira Condensed', sans-serif;
+  color: #000;
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 50px;
+  line-height: 57px;
+}
+.getst-bn{
+  background: #000 !important;
+  color: #fff !important;
+  font-size: 18px !important;
+  font-weight: 600;
+}
+.health-reviews{
+  background-color:#0e0e0f;
+  background-image: url(../src/images/h1_bg-shape-foot.png);
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+}
+.health-reviews h2{
+  color: #fff;
+}
+.items-review.text-center {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 10px;
+}
+.next-review .row > div{
+  border-right: dashed 1px #d5d5d5;
+}
+.next-review .row > div:last-child{
+  border-right: none;
+}
+.veter-items svg{
+  color: #eda81d;
+  font-size: 26px;
+  margin-right: 14px;
+  margin-bottom: 2px;
+  display: block;
+}
+.personal-carity-div figure,
+.personal-carity-next-div figure{
+  height: 450px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.personal-carity-div figure img,
+.personal-carity-next-div figure img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.personal-carity-div{
+  background: url(../src/images/bg-process.jpg)no-repeat;
+  display: inline-block;
+  width: 100%;
+  background-size: cover;
+}
+.personal-carity-div h2,
+.personal-carity-div p{
+  color: #fff;
+}
+.order-home-bn{
+  background: #1f2020 !important;
+  color: #fff !important;
+  border-radius: 30px;
+  text-decoration: none;
+  padding: 9px 20px;
+  margin-left: 10px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 1.115rem;
+  -webkit-animation: pulsate-bck 1s ease-in-out infinite both;
+	animation: pulsate-bck 1s ease-in-out infinite both;
+  animation-name: pulsate-bck;
+  transition: all 0.5s;
+}
+.login-bn svg{
+  font-size: 20px;
+}
+.btn-close{
+  background: #eda81d !important;
+  color: #fff !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 9 !important;
+  width: 72px !important;
+  height: 20px !important;
+}
+.menu-mobile-modal{
+  width: 310px !important;
+}
+.menu-modal ul li a{
+    text-decoration: none;
+    color: #000;
+    padding: 10px 0 10px 10px;
+    display: block;
+    background: #f7f7f7;
+    margin-bottom: 3px;
+    width: 100%;
+    text-align: left;
+}
+.menu-modal ul li .active{
+  background: #eda81d !important;
+}
+.mbile-checkout .dropdown-toggle::after{
+   display: none;
+}
+.mbile-checkout .dropdown-toggle {
+  position: relative;
+  padding: 0;
+}
+.mbile-checkout .dropdown-toggle .cart-nuber {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  position: absolute;
+  right: -12px;
+  top: 10px;
+  background: #eda81d;
+  color: #fff;
+}
+.mbile-checkout .dropdown svg {
+  color: #000 !important;
+  font-size: 27px;
+}
+.recipe-5,
+.recipe-4{
+  position: relative;
+}
+
+.number{
+  display: flex;
+align-items: center;
+justify-content: space-between;
+width: 100%;
+}
+.minus, .plus{
+  width:30px;
+  height:30px;
+  background:#f2f2f2;
+  border-radius:50%;
+  padding:8px 5px 8px 5px;
+  display: grid;
+  align-content:center;
+  text-align: center;
+  overflow: hidden;
+  justify-content: center;
+}
+.minus svg, .plus svg{
+  font-size: 10px;
+}
+.input-group input{
+  width: 34px;
+  text-align: center;
+  font-size:17px;
+  border:1px solid #ddd;
+  border-radius:4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+@keyframes pulsate-bck {
+	0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	50% {
+		-webkit-transform: scale(0.9);
+		transform: scale(0.9);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  media css */
+@media (max-width: 1080px){
+  .navbar-nav .nav-link,
+  .log-cart-div .nav-link, .login-bn{
+    font-size: 13px;
+  }
+  .order-home-bn{
+    font-size: 14px;
+  }
+  .banner-part h1, .banner-part h1 span{
+    font-size: 59px;
+  }
+  .comon-bn{
+    width: 80%;
+  }
+  .comon-part-ps h5,
+  .comon-part-ps p{
+    padding-left: 10px;
+  }
+  .comon-choseing-part ul li, .left-treat-sec ul li{
+    margin-bottom:7px;
+    font-size: 16px;
+  }
+  .compainer-div h2,
+  .comon-choseing-part h2,
+  .how-it-work-home h2,
+  .ourclient-details-div h2,
+  .ourclient-details-div h2,
+  .our-treat-care h2,
+  .our-expart-team h2,
+  .our-nutrions-div h2,
+  .testmonial-sec-div h2,
+  .blog-home-sec h2,
+  .new-letter-div h2{
+    font-size: 45px !important;
+    line-height: 51px;
+  }
+  .how-it-work-home h5{
+    font-size: 22px;
+  }
+   /* recipe page */
+   .recipe-1 h2, .recipe-2 h2, .recipe-3 h2, .recipe-5 h2,.recipe-4 h2, .order-page h2{
+    font-size: 35px !important;
+    line-height: 41px;
+  }
+  .recipe-4 figure,
+  .recipe-5 figure{
+    position: absolute;
+    bottom: 0;
+  }
+
+  /* cart */
+  .comon-sec-div-mn .form-group {
+    width: 40%;
+   }
+  
+  /* plan */
+
+  .ourplan-div h2{
+    font-size: 35px !important;
+    line-height: 41px;
+  }
+
+
+}
+@media (max-width: 1024px){
+  .navbar-nav .nav-link,
+  .log-cart-div .nav-link, .login-bn{
+    font-size: 13px;
+  }
+  .banner-part h1, .banner-part h1 span{
+    font-size: 59px;
+  }
+  .order-home-bn{
+    font-size: 14px;
+  }
+  .comon-bn{
+    width: 80%;
+  }
+  .comon-part-ps figure{
+    margin-right: 10px;
+  }
+  .comon-part-ps h5,
+  .comon-part-ps p{
+    padding-left: 10px;
+  }
+  .comon-choseing-part ul li, .left-treat-sec ul li{
+    margin-bottom:7px;
+    font-size: 16px;
+  }
+  .compainer-div h2,
+  .comon-choseing-part h2,
+  .how-it-work-home h2,
+  .ourclient-details-div h2,
+  .ourclient-details-div h2,
+  .our-treat-care h2,
+  .our-expart-team h2,
+  .our-nutrions-div h2,
+  .testmonial-sec-div h2,
+  .blog-home-sec h2,
+  .new-letter-div h2{
+    font-size: 45px !important;
+    line-height: 51px;
+  }
+  footer ul li, footer ul li a{
+    font-size: 13px;
+  }
+
+   /* recipe page */
+   .recipe-1 h2, .recipe-2 h2, .recipe-3 h2, .recipe-5 h2,.recipe-4 h2, .order-page h2{
+    font-size: 35px !important;
+    line-height: 41px;
+  }
+  .recipe-4 figure, .recipe-5 figure {
+    position: relative;
+    bottom: 0;
+}
+
+/* plan */
+
+.ourplan-div h2{
+  font-size: 35px !important;
+  line-height: 41px;
+}
+  
+  
+}
+@media (max-width: 900px){
+  .logo-ps{
+    display: none;
+  }
+  .sc-logo-ps{
+    display: block;
+  }
+   /* comon banner */
+  
+  .banner-part{
+    background-size: contain;
+    height: 537px;
+    margin-top: 70px;
+  }
+  .banner-content{
+    height:537px;
+    padding-top: 0;
+  }
+  .banner-part h1, .banner-part h1 span {
+    font-size: 55px;
+  }
+  .banner-part p{
+    font-size: 18px;
+  }
+  .about-bn{
+    font-size: 17px;
+    height: 46px;
+    width: 217px;
+
+  }
+  
+  
+  /* banner ends */
+
+  .comon-quick-div{
+    height: 380px;
+    padding: 0 15px;
+  }
+  .comon-bn{
+    width: 100%;
+  }
+  .comon-quick-div h2{
+    font-size: 20px;
+  }
+  .comon-quick-div p{
+    font-size: 13px;
+  }
+  .comon-part-ps figure{
+    margin-right: 10px;
+  }
+  .how-it-work-home h5{
+    font-size: 19px;
+  }
+  .how-it-work-home p {
+    color: #fff;
+    font-size: 14px;
+  }
+  .our-ws-progress figure{
+    width: 79px;
+    height: 79px;
+  }
+  .progress-details h5{
+    font-size: 21px;
+  }
+  .comon-choseing-part ul, .left-treat-sec ul {
+    column-count: 1;
+    column-gap: 0;
+  }
+  .comon-choseing-part ul li, .left-treat-sec ul li{
+    margin-bottom:7px;
+    font-size: 15px;
+  }
+  .care-img-box{
+    height: 350px;
+  }
+  .compainer-div h2,
+  .comon-choseing-part h2,
+  .how-it-work-home h2,
+  .ourclient-details-div h2,
+  .ourclient-details-div h2,
+  .our-treat-care h2,
+  .our-expart-team h2,
+  .our-nutrions-div h2,
+  .testmonial-sec-div h2,
+  .blog-home-sec h2,
+  .new-letter-div h2{
+    font-size: 35px !important;
+    line-height: 35px;
+  }
+  footer ul li, footer ul li a{
+    font-size: 13px;
+  }
+  .steps-text{
+    font-size: 25px;
+  }
+  .comon-part-ps h5,
+  .comon-part-ps p{
+    padding-left: 0;
+  }
+  .comon-choseing-part ul li, .left-treat-sec ul li{
+    font-size: 15px;
+  }
+  .About-history h2,
+  .why-choose-partabout h2,
+  .our-miison h2{
+    font-size: 35px !important;
+    line-height: 41px;
+  }
+  .comon-choose-div h2,
+  .our-miison h6{
+    font-size: 25px !important;
+  }
+
+  /* plan */
+
+  .ourplan-div h2{
+    font-size: 35px !important;
+    line-height: 41px;
+  }
+ 
+
+}
+@media (max-width: 768px){
+  .logo-ps{
+    display: none;
+  }
+  .sc-logo-ps{
+    display: block;
+  }
+   /* comon banner */
+  
+  .banner-part{
+    background-size: contain;
+    height: 486px;
+    margin-top: 70px;
+  }
+  .banner-content{
+    height:486px;
+    padding-top: 0;
+  }
+  .banner-part h1, .banner-part h1 span {
+    font-size: 55px;
+  }
+  .banner-part p{
+    font-size: 18px;
+  }
+  .about-bn{
+    font-size: 17px;
+    height: 46px;
+    width:207px;
+
+  }
+  
+
+  /* banner ends */
+  .comon-quick-div{
+    height: 380px;
+    padding: 0 15px;
+  }
+  .comon-bn{
+    width: 100%;
+  }
+  .comon-quick-div h2{
+    font-size: 20px;
+  }
+  .comon-quick-div p{
+    font-size: 13px;
+  }
+  .how-it-work-home h5{
+    font-size: 19px;
+  }
+  .how-it-work-home p {
+    color: #fff;
+    font-size: 14px;
+  }
+  .our-ws-progress figure{
+    width: 79px;
+    height: 79px;
+  }
+  .progress-details h5{
+    font-size: 21px;
+  }
+
+  .compainer-div h2,
+  .comon-choseing-part h2,
+  .how-it-work-home h2,
+  .ourclient-details-div h2,
+  .ourclient-details-div h2,
+  .our-treat-care h2,
+  .our-expart-team h2,
+  .our-nutrions-div h2,
+  .testmonial-sec-div h2,
+  .blog-home-sec h2,
+  .new-letter-div h2{
+    font-size: 35px !important;
+    line-height: 35px;
+  }
+  .comon-choseing-part ul, .left-treat-sec ul {
+    column-count: 1;
+    column-gap: 0;
+  }
+  .comon-choseing-part ul li, .left-treat-sec ul li{
+    margin-bottom:7px;
+    font-size: 15px;
+  }
+  .care-img-box{
+    height: 350px;
+  }
+  footer ul li, footer ul li a{
+    font-size: 13px;
+  }
+   /* sub banner */
+   .subpage-banner{
+    margin-top: 70px;
+    height: 170px;
+  }
+  .sub-page-content{
+    height: 170px;
+    padding-top: 0;
+  }
+  /* about page */
+  .ourmisson-pic{
+    height: 340px;
+  }
+  .About-history h2,
+  .why-choose-partabout h2,
+  .our-miison h2{
+    font-size: 35px !important;
+    line-height: 41px;
+  }
+  .comon-choose-div h2,
+  .our-miison h6{
+    font-size: 25px !important;
+  }
+
+}
+
+@media (max-width: 667px){
+  /* comon banner */
+  .logo-ps{
+    display: none;
+  }
+  .sc-logo-ps{
+    display: block;
+  }
+  .banner-part{
+    background-size: contain;
+    height: 386px;
+    margin-top: 70px;
+  }
+  .banner-content{
+    height:350px;
+    padding-top: 0;
+  }
+  .banner-part h1, .banner-part h1 span {
+    font-size: 37px;
+  }
+  .banner-part p{
+    font-size: 13px;
+  }
+  .about-bn{
+    font-size: 13px;
+    height: 33px;
+    width: 120px;
+
+  }
+  
+
+  /* banner ends */
+
+  .tabs-sec-food .nav-item{
+    margin-bottom: 20px;
+  }
+  .comon-part-ps figure{
+    margin-right: 10px;
+  }
+
+  .compainer-div h2,
+  .comon-choseing-part h2,
+  .how-it-work-home h2,
+  .ourclient-details-div h2,
+  .ourclient-details-div h2,
+  .our-treat-care h2,
+  .our-expart-team h2,
+  .our-nutrions-div h2,
+  .testmonial-sec-div h2,
+  .blog-home-sec h2,
+  .new-letter-div h2{
+    font-size: 45px !important;
+    line-height: 51px;
+  }
+  .comon-bn{
+    width: 60%;
+  }
+  .comon-quick-div h2{
+    font-size: 24px;
+  }
+  .comon-quick-div p{
+    font-size: 15px;
+  }
+  .how-it-work-home h5{
+    font-size: 27px;
+  }
+  .how-it-work-home p {
+    color: #fff;
+    font-size: 16px;
+  }
+  .our-ws-progress figure{
+    width: 120px;
+    height: 120px;
+  }
+  .progress-details h5{
+    font-size: 27px;
+  }
+  footer ul li, footer ul li a{
+    font-size: 15px;
+  }
+   /* sub banner */
+   .subpage-banner{
+    margin-top: 70px;
+    height: 170px;
+  }
+  .sub-page-content{
+    height: 170px;
+    padding-top: 0;
+  }
+
+  /* about page */
+  .ourmisson-pic{
+    height: 340px;
+  }
+  .About-history h2,
+  .why-choose-partabout h2,
+  .our-miison h2{
+    font-size: 35px !important;
+    line-height: 41px;
+  }
+  .comon-choose-div h2,
+  .our-miison h6{
+    font-size: 25px !important;
+  }
+  .comon-blog-post figure,
+  .post-details{
+    width: 100%;
+  }
+
+  /* recipe page */
+  .recipe-1 h2, .recipe-2 h2, .recipe-3 h2, .recipe-5 h2, .order-page h2{
+    font-size: 35px !important;
+    line-height: 41px;
+  }
+  /* review page */
+  .reviews h2, 
+  .google-revies h2,
+  .next-review h2,
+  .personal-carity-div h2,
+  .health-reviews h2,
+  .personal-carity-next-div h2,
+  .cm-sp-heading{
+    font-size: 35px !important;
+    line-height: 41px;
+
+  }
+  .personal-carity-div figure, .personal-carity-next-div figure{
+    height: 250px;
+  }
+
+  /* contact page */
+
+  .left-sec-div1 h2,
+  .contact-form-div h2{
+    font-size: 35px !important;
+    line-height: 41px;
+  }
+
+}
+
+@media (max-width: 480px){
+  /* comon banner */
+  .logo-ps{
+    display: none;
+  }
+  .sc-logo-ps{
+    display: block;
+  }
+  .banner-part{
+    background-size: contain;
+    height: 255px; 
+    margin-top: 70px;
+  }
+  .banner-content{
+    height:200px;
+    padding-top: 24px;
+    
+  }
+  .banner-part h1, .banner-part h1 span{
+    font-size: 31px;
+  }
+  .banner-part p{
+    font-size: 13px;
+  }
+  .about-bn{
+    font-size: 13px;
+    height: 33px;
+    width: 180px;
+
+  }
+   /* sub banner */
+   .subpage-banner{
+    margin-top: 70px;
+    height: 170px;
+  }
+  .sub-page-content{
+    height: 170px;
+    padding-top: 0;
+  }
+
+
+  /* banner ends */
+
+  /* about page */
+  .ourmisson-pic{
+    height: 340px;
+  }
+  .About-history h2,
+  .why-choose-partabout h2,
+  .our-miison h2{
+    font-size: 35px !important;
+    line-height: 41px;
+  }
+  .comon-choose-div h2,
+  .our-miison h6{
+    font-size: 25px !important;
+  }
+}
+
+@media (max-width: 375px){
+  .logo-ps{
+    display: none;
+  }
+  .sc-logo-ps{
+    display: block;
+  }
+  /* comon banner */
+  .banner-part{
+    background-size: contain;
+    height: 215px;
+    margin-top: 70px;
+  }
+  .banner-content{
+    height:200px;
+    padding-top: 0;
+  }
+  .banner-part h1, .banner-part h1 span{
+    font-size: 25px;
+  }
+  .banner-part p{
+    font-size: 13px;
+  }
+  .about-bn{
+    font-size: 13px;
+    height: 33px;
+    width: 120px;
+
+  }
+  /* sub banner */
+  .subpage-banner{
+    margin-top: 70px;
+    height: 170px;
+  }
+  .sub-page-content{
+    height: 170px;
+    padding-top: 0;
+  }
+
+  /* banner ends */
+
+
+  .compainer-div h2,
+  .comon-choseing-part h2,
+  .how-it-work-home h2,
+  .ourclient-details-div h2,
+  .ourclient-details-div h2,
+  .our-treat-care h2,
+  .our-expart-team h2,
+  .our-nutrions-div h2,
+  .testmonial-sec-div h2,
+  .blog-home-sec h2,
+  .new-letter-div h2{
+    font-size: 35px !important;
+  }
+  .newbg-pic{
+    bottom: -20px;
+  }
+  .tabs-sec-food .nav-item{
+    margin-bottom: 20px;
+  }
+  .comon-part-ps figure{
+    margin-right: 10px;
+  }
+  .comon-choseing-part ul, .left-treat-sec ul{
+    column-count: 1;
+    column-gap: 0;
+  }
+  .care-img-box{
+    height: 300px;
+  }
+  .our-treat-care{
+    padding: 0 15px;
+  }
+  .cart-dropdown-ne{
+    right: -90px;
+    top:30px;
+    margin-top: 30px !important;
+  }
+
+  /* about page */
+  .ourmisson-pic{
+    height: 340px;
+  }
+  .About-history h2,
+  .why-choose-partabout h2,
+  .our-miison h2{
+    font-size: 35px !important;
+    line-height: 41px;
+  }
+  .comon-choose-div h2,
+  .our-miison h6{
+    font-size: 25px !important;
+  }
+
+  /* recipe page */
+  .recipe-1 h2, .recipe-2 h2, .recipe-3 h2, .recipe-5 h2, .order-page h2{
+    font-size: 35px !important;
+    line-height: 41px;
+  }
+
+  /* review page */
+  .reviews h2, 
+  .google-revies h2,
+  .next-review h2,
+  .personal-carity-div h2,
+  .health-reviews h2,
+  .personal-carity-next-div h2,
+  .cm-sp-heading{
+    font-size: 35px !important;
+    line-height: 41px;
+
+  }
+  .personal-carity-div figure, .personal-carity-next-div figure{
+    height: 250px;
+  }
+  /* cart page */
+
+  .comon-sec-div-mn .form-group {
+    width: 41%;
+  }
+
+  /* contact page */
+
+  .left-sec-div1 h2,
+  .contact-form-div h2{
+    font-size: 35px !important;
+    line-height: 41px;
+  }
+
+}
+
+
+
+
+
+
